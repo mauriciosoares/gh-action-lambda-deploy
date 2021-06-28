@@ -17,10 +17,9 @@ jobs:
           node-version: '12'
 
       - name: build
-          run: | 
-            npm install
-            npx @vercel/ncc build src/index.ts -o dist
-
+        run: | 
+          npm install
+          npx @vercel/ncc build src/index.ts -o dist
       - name: default deploy
         uses: appleboy/lambda-action@master
         with:
