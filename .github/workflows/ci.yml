@@ -1,7 +1,12 @@
 name: deploy to lambda
-on: [push]
-jobs:
 
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
   deploy_source:
     name: deploy lambda from source
     runs-on: ubuntu-latest
